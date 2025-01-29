@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #ff4d00;
+    --secondary-color: #2a2a2a;
+    --accent-color: #ffd700;
+    --text-color: #ffffff;
+    --background-color: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://wallpapercave.com/wp/wp9730554.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 2rem;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Featured Tournaments Section */
+#featured-tournaments {
+    padding: 5rem 5%;
+}
+
+.tournament-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tournament-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tournament-card:hover {
+    transform: translateY(-10px);
+}
+
+.tournament-image {
+    height: 200px;
+    background: url('https://wallpapercave.com/wp/wp9730554.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tournament-card h3 {
+    padding: 1rem;
+    color: var(--accent-color);
+}
+
+.tournament-card p {
+    padding: 0.5rem 1rem;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #ff6a00;
+}
+
+/* Live Updates Section */
+#live-updates {
+    padding: 5rem 5%;
+    background-color: var(--secondary-color);
+}
+
+.updates-container {
+    margin-top: 2rem;
+}
+
+.update-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.update-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.update-header i {
+    color: var(--accent-color);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.live-indicator {
+    display: inline-block;
+    background-color: #ff0000;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 3rem 5% 1rem 5%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
